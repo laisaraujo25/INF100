@@ -1,0 +1,22 @@
+# Nome do aluno: Laís Pedrosa Araúj
+# Data: 09/04/2024
+
+# O programa avalia se os pesos das caçambas de caminhão bitrem estão de acordo
+# com os valores permitidos.
+
+peso1 = int(input ('Peso bruto da caçamba1 (ton): '))
+
+if peso1 >= 20 :
+    print('\nSobrepeso na caçamba 1.')
+else :
+    peso2 = int(input ('Peso bruto da caçamba2 (ton): '))
+    if peso2 >= 18 :
+        print('\nSobrepeso na caçamba 2.')
+
+    elif peso1 < 20 and peso2 < 18 :
+        if peso1 + peso2 >= 35 :
+            print('\nPeso total ultrapassado.')
+            pesototal = peso1 + peso2
+            print('Caçamba 1 + Caçamba 2 (ton) = %.1f ' %(pesototal))
+        else :
+            print('\nPesos dentro dos limites!')
