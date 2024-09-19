@@ -1,0 +1,49 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 19/03/2024
+# (O programa exibe informações sobre a graduação de um estudante)
+
+# algumas informações sobre a UFV
+nomeInst = 'Universidade Federal de Viçosa'  # nome da UFV
+anoFund = 1926    # ano de fundação da UFV em Viçosa
+estGrad = 10979   # número de estudantes de Graduação
+estMest = 1582    # número de estudantes de Mestrado
+estDout = 1414    # número de estudantes de Doutorado
+areaCV =  2372.97 # área do Campus Viçosa em hectarea 
+# ano atual
+anoAtual = 2024
+
+# exemplo de comando print: uso de variáveis com importação para string 
+print('\nA %s foi fundada em %d:' %(nomeInst,anoFund))
+
+# o trecho acima, com a definição das variáveis e um comando de impressão
+# já estava pronto. A SUA solução deve começar a partir da próxima linha
+areaCV1 = areaCV * 10000
+areaCV2 = areaCV1 / 1000000
+Total = estGrad + estMest + estDout
+Gradpct = estGrad * 100 / 13975
+Mestpct = estMest * 100 / 13975
+Doutpct = estDout * 100 / 13975
+Totalpct = 100.0
+InicioCurso = 2024
+
+
+print('Área do Campus Viçosa: %.1f (ha) ou %.1f (km²)' %(areaCV, areaCV2))
+print()
+print('Número e percentual de Estudantes')
+print('%9s %11s %12s %8s' %('Graduação', 'Mestrado', 'Doutorado', 'Total'))
+print('%9s %11s %12s %8s' %(estGrad,estMest, estDout, Total))
+print('%9.1f%% %10.1f%% %11.1f%% %7.1f%%' %(Gradpct, Mestpct, Doutpct, Totalpct))
+print()
+nome = input('Qual o seu nome?')
+curso = input('Qual o seu curso?')
+ano = int(input('Em que ano você iniciou seu curso?'))
+print()
+periodo = (anoAtual - InicioCurso) * 2+1
+print('\n%s, você está no %d° período de %s.' %(nome, periodo, curso))
+
+# exemplo de comando print definido o espaçamento a ser ocupado pelas
+# informações impressas. No exemplo, 4 textos (strings)
+#print('%9s %11s %12s %8s' %('Graduação', 'Mestrado', 'Doutorado', 'Total'))
+
+
+#print('%s%12s%13s%9s' %('Graduação', 'Mestrado', 'Doutorado', 'Total'))
