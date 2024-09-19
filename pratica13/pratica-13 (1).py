@@ -1,5 +1,4 @@
 # Nome: Laís Pedrosa Araújo
-# Matrícula: 117160
 # Data: 27/08/2024
 # Comentário: O programa cria um arranjo, encontra o menor valor e
 # conta quantas vezes ele aparece.
