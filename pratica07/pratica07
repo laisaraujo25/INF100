@@ -1,0 +1,38 @@
+# Nome: Laís Pedrosa Araújo
+# Data: 16/07/2024
+# O programa calcula o valor do N-ésimo elemento e o valor da
+# soma dos N primeiros elementos de uma Progressão Geométrica (PG).
+
+# mensagens exibidas APENAS 1 vez a cada execução do programa
+print('Este programa calcula o valor do N-ésimo elemento e o valor da')
+print('soma dos N primeiros elementos de uma Progressão Geométrica (PG)')
+
+while True:
+    
+    # leitura dos dados: 1o elemento, razão e N
+    elem = float(input('\nInforme o primeiro elemento da PG: '))
+    razao = float(input('Informe a razão da PG: '))
+    N = float(input('Informe o valor de N: '))
+    # totaliza o primeiro elemento
+    soma = elem
+    # inicializa o contador para controlar o número de repetições
+    cont = 1
+    # gera os demais N-1 elementos da PG
+    while cont < N : # loop para repetir N-1 vezes
+        # gera o próximo elemento da PG
+        elem = elem * razao
+        # totaliza o novo elemento gerado
+        soma = soma * elem
+        # incrementa o contador
+        cont = cont + 1
+    # informa os valores calculados
+    print('\nElemento da posição %d é: %.4f' %(cont, elem))
+    print('O produto dos %d primeiros elementos da PG é: %.4f' %(N, soma))
+
+    ##### fim do código para uma Progressão Geométrica
+
+    # pergunta se quer executar outra vez
+    resp = input('\nDeseja executar novamente? (S/n): ').upper()
+    if resp != 'S' :
+        break
+    print()
