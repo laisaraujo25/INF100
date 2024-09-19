@@ -1,0 +1,65 @@
+# Nome do aluno: Laís Pedrosa Araúj
+# Data: 09/07/2024
+# O programa calcula as raizes da Fórmula de Bhaskara 
+# Programa para cálculo de raizes de equação do segundo grau
+
+# msgs iniciais
+print('Programa para cálculo das raízes de equação do 2o grau')
+print('cuja fórmula geral é dada por: ax² + bx + c')
+# mensagens específicas para uma equação
+print('Informe os valores dos coeficientes da equação')
+# Ler os coeficientes da equação
+a = float(input('a = '))
+b = float(input('b = '))
+c = float(input('c = '))
+
+#calcular delta
+delta = b**2 - 4*a*c
+# primeira parte da resposta - sem pular para a próxima linha
+print('\nA equação %fx² + %fx + %f = 0, ' %(a, b, c), end='')
+# testa todos os casos possíveis
+if a == 0 :  # não é de 2o. grau
+    print('não é uma de 2⁰ grau, pois o coeficiente a = 0')
+elif delta < 0: # sem raízes reais
+    print('não possui raízes reais')
+elif delta == 0:  # apenas 1 raiz real
+    # calculo da raiz
+    x1 = -b / (2*a)
+    # impressão do valor calculado
+    print('possui uma única raiz real: ', x1)
+else : # 2 raízes reais
+    # cálculo das raízes
+    x1 = (-b - (delta)**0.5) / (2*a)
+    x2 = (-b + (delta)**0.5) / (2*a)
+    #imprimir os valores calculados para as 2 raízes
+    print('possui duas raízes reais', x1, 'e', x2)
+i = 1
+while True:
+    resposta = input('Deseja executar novamente? (S/N) :').upper()
+    if resposta != 'S':
+        break
+    else:
+        print('\nInforme os valores dos coeficientes da equação')
+
+        a = float(input('a = '))
+        b = float(input('b = '))
+        c = float(input('c = '))
+
+        delta = b**2 - 4*a*c
+
+        print('\nA equação %fx² + %fx + %f = 0, ' %(a, b, c), end='')
+
+        if a == 0 :  
+            print('não é uma de 2⁰ grau, pois o coeficiente a = 0')
+        elif delta < 0: 
+            print('não possui raízes reais')
+        elif delta == 0: 
+   
+            x1 = -b / (2*a)
+    
+            print('possui uma única raiz real: ', x1)
+        else : 
+            x1 = (-b - (delta)**0.5) / (2*a)
+            x2 = (-b + (delta)**0.5) / (2*a)
+    
+            print('possui duas raízes reais', x1, 'e', x2)
