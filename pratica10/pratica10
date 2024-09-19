@@ -1,0 +1,44 @@
+# Nome: Laís Pedrosa Araújo
+# Data: 06/08/2024
+# O programa calcula a média e o número de classificados de uma competição de levantamento de peso
+
+############## NÃO ALTERE NADA nas próximas 14 linhas  ##########
+import numpy as np
+N = 12       # 12 competidores
+while True:
+    s = int(input('Informe um valor inteiro: '))
+    if s >= 0 :
+        break
+    print('O valor da semente deve ser > 0.')
+np.random.seed(s)   # usa a semente para gerar os números aleatórios
+A = np.random.randint(150, 186, N) # cria um arranjo com números inteiros [150, 185]
+# imprime o arranjo em uma única linha
+print('Pesos levantados = [%d' %A[0], end='')
+for i in range (1, len(A)):
+    print(', %2d' %A[i], end='')
+print(']\n')    # fim da impressão do arranjo
+############# NÃO ALTERE NADA nas 14 linhas acima   ################
+############# escreva código novo APENAS abaixo desta linha  #######
+
+soma = 0
+for i in range (0, N):
+    soma = soma + A[i]
+media = (soma / N)
+print('Peso médio: %.1f kg' %(media))
+
+clas = 0
+for i in range (0, N):
+        if A[i] > media:
+            clas = clas + 1
+print('Número de classificados: %d' %(clas))
+
+print('\nLista dos classificados')
+print('Número do Peso (kg)')
+print('Atleta   levantado')
+peso = 0
+atleta = 0
+for k in range (0, N):
+    if A[k] > media:
+        atleta = k + 1
+        peso = A[k]
+        print('%5d %11d' %(atleta,peso))
