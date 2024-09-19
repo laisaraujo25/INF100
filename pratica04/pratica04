@@ -1,0 +1,47 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 02/04/2024
+# O programa calcula o valor do salário líquido de acordo com a alíquota e a parcela a deduzir correspondentes ao salário de contribuição, todos pré-definidos pelo INSS.
+# limites de salário bruto
+lim1 = 1412.00
+lim2 = 2666.68
+lim3 = 4000.03
+lim4 = 7786.02
+# aliquotas de contribuição para cada faixa salarial
+aliquota1 = 0.075   # 7.5%
+aliquota2 = 0.09    # 9%
+aliquota3 = 0.12    # 12%
+aliquota4 = 0.14    # 14%
+# parcela a deduzir para cada faixa salarial
+parcela1 = 0.0      
+parcela2 = 21.18
+parcela3 = 101.18
+parcela4 = 181.18
+
+print('Cálculo do valor do INSS')
+# Escreva seu código abaixo desta linha. NÃO MODIFIQUE os valores numéricos acima
+nome = input('Nome: ')
+salario = float(input('Informe o salário bruto: '))
+salariofixo = 7786.02
+
+if salario <= lim1 :
+    valordesc = salario * aliquota1 - parcela1
+    
+elif salario <= lim2 :
+    valordesc = salario * aliquota2 - parcela2
+    
+elif salario <= lim3 :
+    valordesc = salario * aliquota3 - parcela3
+    
+elif salario <= lim4 :
+    valordesc = salario * aliquota4 - parcela4
+    
+else:
+    salario > lim4
+    valordesc = salariofixo * aliquota4 - parcela4
+    
+salarioliq = salario - valordesc
+
+print ('\nNome: %s' %(nome))
+print ('Salário Bruto: %10.2f' %(salario))
+print ('Desconto INSS: %10.2f' %(valordesc))
+print ('Salário líquido: %8.2f' %(salarioliq))
