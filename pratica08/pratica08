@@ -1,0 +1,36 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 23/07/2024
+# O programa calcula o valor de pi
+
+pi6 = 3.141592
+
+# estrutura repetitiva para permitir a execução do programa várias vezes
+while True:
+    n = int(input('Informe o valor de N: '))
+    
+    while n < 1:
+        print('O número de elementos da série deve ser >= 1.')
+        n = int(input('Informe o valor de N: '))
+    i = 0
+    soma = 0
+    deno = 1
+    while i < n:
+        if n >= 1:
+            if i % 2 == 0:
+                nume = 1
+            else:
+                nume = -1
+        
+        soma = soma + (nume / deno)
+        deno = deno + 2
+        i = i + 1
+        erro = abs(pi6 - soma)
+    soma = soma * 4
+    print("O valor calculado de PI com %d elementos é: %.6f" %(n,soma))
+    print('Erro: %.6f (considerando o valor exato 3.141592)' %(abs(erro)))
+
+    # leitura da resposta do usuário para determinar se haverá nova
+    # execução ou não
+    resposta = input('Deseja executar novamente? (S/n): ').upper()
+    if resposta != 'S' :
+        break   # o comando break quebra um loop (termina um comando repetitivo)
