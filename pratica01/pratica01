@@ -1,0 +1,53 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 12/03/2024
+# (O programa permite que a tartaruga Tut chegue até o tomate percorrendo um labirinto correspondente ao número da matrícula)
+
+import turtle as Tut
+import p01_maze as m
+
+############# Troque, na linha de baixo, o 0 pelo número de sua matrícula ### 
+matricula = 117160
+m.build_maze( Tut, matricula ) 
+
+############################################
+##  Adicione seu código abaixo desta linha
+############################################
+
+Tut.fd( 60 )
+Tut.right( 90 )
+Tut.fd( 100 )
+Tut. left ( 90 )
+Tut. fd ( 100 )
+Tut. left ( 90 )
+Tut.fd( 100 )
+Tut.right( 90 )
+Tut. fd ( 100 )
+Tut.right( 90 )
+Tut. fd ( 150 )
+Tut. left ( 90 )
+Tut. fd ( 190 )
+Tut.right( 90 )
+Tut. fd ( 100 )
+Tut.right( 90 )
+Tut. fd ( 300 )
+Tut. left ( 90 )
+Tut. fd ( 100 )
+Tut.right( 90 )
+Tut. fd ( 100 )
+Tut. left ( 90 )
+Tut. fd ( 100 )
+Tut. left ( 90 )
+Tut. fd ( 200 )
+Tut. left ( 90 )
+Tut. fd ( 100 )
+Tut.right( 90 )
+Tut. fd ( 100 )
+Tut.right( 90 )
+Tut. fd ( 100 )
+Tut. left ( 90 )
+Tut. fd ( 100 )
+
+############################################
+## Seu código não deve passar desta linha
+############################################
+Tut.Screen().exitonclick()
