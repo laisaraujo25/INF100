@@ -1,0 +1,40 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 13/08/2024
+# O programa faz uma matriz m x n, identifica seu maior valor e
+# então faz uma nova matriz utilizando ele como divisor.
+
+import numpy as np
+m = n = 8 # define as dimensões do arranjo bidimensional
+valor_min = 740   # menor valor aleatório = 740
+valor_max = 751   # maior valor aleatório = 750
+np.random.seed(0) # inicializa a semente para gerar números aleatórios
+altit = np.random.randint(low=valor_min, high=valor_max, size=(m, n))
+
+# imprime o mapa de altitudes
+print('Arranjo original:')
+for i in range (0, m) :
+    for j in range (0, n) :
+        print('%5d' %altit[i][j], end='')
+    print()
+
+##### NÃO modifique o código acime desta linha #####
+########## complete o código no espaço abaixo ######
+####################################################
+maior_num = 0
+cont = 0
+for i in range (0, m):
+    for j in range (0, n):
+        if altit[i][j] > maior_num:
+            maior_num = altit[i][j]
+            cont = cont + 1
+            
+print ('\nMaior valor encontrado: %d' %(maior_num))
+print('Valor encontrado %d vezes.' %(cont))
+
+print('\nArranjo normalizado:')
+A = np.zeros( (m, n) )
+for i in range(0, m):
+    for j in range(0, n):
+        A[i,j] = altit[i][j] / maior_num
+        print('%6.3f' %A[i][j], end='')
+    print()
