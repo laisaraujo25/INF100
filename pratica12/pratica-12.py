@@ -1,5 +1,4 @@
 # Nome: Laís Pedrosa Araújo
-# Matrícula: 117160
 # Data: 20/08/2024
 # Comentário: O programa cria uma imagem, a rotaciona e altera a cor de uma porção dela
 
