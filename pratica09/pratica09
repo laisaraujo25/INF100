@@ -1,0 +1,25 @@
+# Nome: Laís Pedrosa Araújo
+# Data: 30/07/2024
+# O programa gera números aleatórios e identifica quais são maiores ou iguais a 6
+
+# NÃO ALTERE NADA nas próximas 13 linhas
+import numpy as np
+N = 15
+s = int(input('Informe um valor inteiro: '))
+while s < 0:
+    print('O valor deve ser >= 0.')
+    s = int(input('Informe um valor inteiro: '))
+np.random.seed(s)   # usa a semente para gerar os números aleatórios
+A = np.random.randint(1, 11, N) # cria um arranjo com números inteiros [1, 10]
+# imprime o arranjo em uma única linha
+print('Arranjo criado = [%d' %A[0], end='')
+for i in range (1, len(A)):
+    print(', %2d' %A[i], end='')
+print(']\n')    # fim da impressão do arranjo
+# NÃO ALTERE NADA nas 13 linhas acima
+# escreva código novo APENAS abaixo desta linha
+x = 0
+for i in range(0, N):
+    if A[i] >= 6:
+        x = x + 1
+print("\nO número de valores maiores ou iguais a 6 é:",x,"")
