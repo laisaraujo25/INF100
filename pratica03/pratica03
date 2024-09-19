@@ -1,0 +1,25 @@
+# Nome do aluno: Laís Pedrosa Araújo
+# Data: 26/03/2024
+# O programa informa o preço do ingresso para o Play Center de acordo com idade e altura.
+
+print('\nBem-vindo à Central de Ingressos do Play Center')
+# Escreva seu código abaixo desta linha. 
+nome = (input('Nome: '))
+idade = int( input('Idade: '))
+if idade < 4 :
+    print('\n %s tem menos de 4 anos e não é permitida a sua entrada no Play Center.' %(nome))
+else:
+    if idade >= 4 and idade <= 9 :
+        ing = 100
+    elif idade >= 10 and idade <= 17 :
+        ing = 150
+    elif idade >= 18 :
+        ing = 200
+    if idade >= 4 :
+        altura = float( input('Altura: '))
+        if altura < 1.50 :
+            tipo = 'Restrito'
+            ing =  ing - ing * 30 / 100
+        else:
+            tipo = 'Livre'
+        print('\n%s, seu ingresso é do tipo %s e custa R$ %0.2f' %(nome, tipo, ing))
